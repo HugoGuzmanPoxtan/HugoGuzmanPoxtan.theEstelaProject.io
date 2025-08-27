@@ -12,16 +12,21 @@
 
     <header style="width: auto;">
         <h1>FELIZ PRIMER MES MI VIDA</h1>
-        <img src="/images/4ec0737ce90ebb69f4f0132df3c708db.gif" alt="Snoppy">
+        <img src="images/ezgif-74cdb4ab57523d.gif" alt="Snoppy">
     </header>
+    
     <section>
         <div class="note">
-            <p>Notas</p>
+            <p id="noteTitle">Nota</p>
+            <button id="openModal" tooltip="Da click">Abrir Nota</button>
+        </div>
 
-            <button id="openModal">Abrir Modal</button>
-
+        <div class="note">
+            <p id="noteTitle2">Fotos que me encantan</p>
+            <button id="openModal2" tooltip="Da click">Abrir Fotos</button>
         </div>
     </section>
+
     <!-- Modal 1-->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -29,5 +34,23 @@
             <p id="modalText"></p>
         </div>
     </div>
+
+    <!-- Modal 2-->
+    <div id="myModal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="carousel" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+            <img id="carouselImage" src="images/foto1.jpg" alt="Foto especial" style="max-width: 250px; max-height: 300px; border-radius: 12px; margin-right: 20px;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div id="carouselText" style="min-width: 180px; margin-bottom: 15px; color: #EBF0FF; font-size: 1.1em; text-align: left;"></div>
+                <div>
+                    <button id="prevBtn" style="margin-bottom: 15px;">Anterior</button>
+                    <button id="nextBtn">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
 </body>
 </html>
