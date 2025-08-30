@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal2 = document.getElementById("myModal2");
     const openModal2 = document.getElementById("openModal2");
     const closeModal2 = document.querySelector(".close");
-    const modalText2 = document.getElementById("modalText2");
 
     const textToType = "Hola mi amor, hice esta pagina con el proposito de hacer una carta para ti, un tanto diferente. Quiero decirte que me siento muy feliz de poder cumplir un mes  a tu lado y de poder disfrutar tantas cosas juntos, me has hecho demasiado feliz y sin duda alguna me encanta ese hecho, he aprendido cosas de ti que sin duda hacen que cada dia me enamore mas y mas de ti, aspectos tan bonitos, tu sonrisa, tus ojos y tu carita tan preciosa, ademas en tu forma de ser es un punto el cual yo queria conocer y me siento muy afortunado de tener la oportunidad de hacerlo.";
     let index = 0;
@@ -67,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const imageTexts = [
-        "La primera foto, tan especial como única.",
-        "El domingo de novios que tanto habiamos querido.",
-        "El primer ramo de flores que te di.",
-        "El dia en que supe que sabia que ibamos a estar juntos y que es ella a quien quiero"
+        "Nuestra primer foto, un hermoso recuerdo del dia que te conoci y pense una y mil veces que en definitiva queria formar una relacion a tu lado 💕.",
+        "El domingo de novios que tanto habiamos querido y que espero sigan siendo muchisimos mas ♥️",
+        "El primer ramo de flores que te di y que elegi con tanto cariño esperando hacerte feliz 💕.",
+        "El dia en que quede maravillado por verte de nuevo y al lucir tan hermosa que pense una y miil veces en decirte todo lo que sentia y siento 💕"
     ];
 
     let currentIndex = 0;
@@ -102,12 +101,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Cuando abras el modal 2, muestra la primera imagen y texto
+    // Abrir el modal 2, muestra la primera imagen y texto
     openModal2.addEventListener("click", () => {
         modal2.style.display = "block";
         currentIndex = 0;
         showImage(currentIndex);
     });
     
+    const audio = document.getElementById("myAudio");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audioStatus = document.getElementById("audioStatus");
+
+    const playIcon = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polygon points="6,4 24,14 6,24" fill="white"/></svg>`;
+    const pauseIcon = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="4" width="5" height="20" fill="white"/><rect x="17" y="4" width="5" height="20" fill="white"/></svg>`;
+
+    playPauseBtn.innerHTML = playIcon;
+
+    if (audio && playPauseBtn) {
+        playPauseBtn.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.innerHTML = pauseIcon;
+                audioStatus.textContent = "Pausar canción";
+            } else {
+                audio.pause();
+                playPauseBtn.innerHTML = playIcon;
+                audioStatus.textContent = "Reproducir canción";
+            }
+        });
+
+        audio.addEventListener("ended", () => {
+           playPauseBtn.innerHTML = pauseIcon;
+            audioStatus.textContent = "Reproducir canción";
+        });
+    }
     
 });

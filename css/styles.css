@@ -1,5 +1,12 @@
 #principal{
-    background-color: #2D284B;
+    background: 
+      radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#9687f5 54% 57%,#0000 59%) 0 calc(316px/2),
+      radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#9687f5 54% 57%,#0000 59%) calc(316px/2) 0,
+      radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#9687f5 54% 57%,#0000 59%),
+      radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#9687f5 54% 57%,#0000 59%),
+      #2d284b;
+    background-size: calc(316px/4.667) 316px,316px calc(316px/4.667);
+
 }
 
 h1{
@@ -68,6 +75,30 @@ height: 150px;
 width: 300px;
 }
 
+.noteHeader{
+background: rgba(255, 255, 255, 0.07);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.7px);
+-webkit-backdrop-filter: blur(6.7px);
+height: 100px;
+width: 400px;
+display: flex;                
+align-items: center;         
+justify-content: center;   
+margin-top: 25px;
+}
+
+.note2{
+background: rgba(255, 255, 255, 0.07);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.7px);
+-webkit-backdrop-filter: blur(6.7px);
+height: 270px;
+width: 300px;
+}
+
 /* Estilos del boton */
 button {
  --glow-color: rgb(217, 176, 255);
@@ -129,10 +160,28 @@ button:active {
     margin-bottom: 20px;
 }
 
+#noteTitleHeader {
+    color: #EBF0FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
 #noteTitle2 {
     color: #EBF0FF;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#noteTitle3 {
+    color: #EBF0FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 18px;
     font-weight: bold;
     text-align: left;
     margin-left: 15px;
@@ -199,4 +248,60 @@ button:active {
     #carousel .carousel-buttons {
         margin-top: 8px;
     }
+}
+
+#carouselText {
+    color: #EBF0FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.audio-player {
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.disco-gif {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+.play-btn {
+    background: #2D284B;
+    color: #fff;
+    border: none;
+    border-radius: 8px; 
+    width: 64px;
+    height: 48px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.play-btn:hover {
+    background: #6c63b5;
+}
+
+.audio-status {
+    color: #EBF0FF;
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }

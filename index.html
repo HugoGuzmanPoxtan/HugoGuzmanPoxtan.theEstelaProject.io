@@ -10,20 +10,32 @@
 <body id="principal">
     <script src="js/script.js"></script>
 
-    <header style="width: auto;">
-        <h1>FELIZ PRIMER MES MI VIDA</h1>
+    <header>
+        <div class="noteHeader">
+        <p id="noteTitleHeader">FELIZ PRIMER MES MI VIDA ♥️✨</p>
+        </div>
         <img src="images/ezgif-74cdb4ab57523d.gif" alt="Snoppy">
     </header>
     
     <section>
         <div class="note">
-            <p id="noteTitle">Nota</p>
-            <button id="openModal" tooltip="Da click">Abrir Nota</button>
+            <p id="noteTitle">Carta ♥️</p>
+            <button id="openModal" tooltip="Da click">Abrir carta</button>
         </div>
 
         <div class="note">
-            <p id="noteTitle2">Fotos que me encantan</p>
-            <button id="openModal2" tooltip="Da click">Abrir Fotos</button>
+            <p id="noteTitle2">Bonitos recuerdos ♥️</p>
+            <button id="openModal2" tooltip="Da click">Abrir Recuerdos</button>
+        </div>
+
+        <div class="note2">
+            <p id="noteTitle3">Una cancion bonita que me hace pensar mucho en ti ♥️</p>
+            <div class="audio-player">
+                <img src="images/disco.gif" alt="Disco girando" class="disco-gif">
+                <button id="playPauseBtn" class="play-btn"></button>
+                <span id="audioStatus" class="audio-status">Reproducir canción</span>
+                <audio id="myAudio" src="media/blue (mini Version).mp3" autoplay></audio>
+            </div>
         </div>
     </section>
 
@@ -42,7 +54,7 @@
             <div id="carousel">
                 <img id="carouselImage" src="images/foto1.jpg" alt="Foto especial">
                 <div class="carousel-info">
-                    <div id="carouselText"></div>
+                    <div id="carouselText" class="carousel-text"></div>
 
                     <div class="carousel-buttons">
                         <button id="prevBtn">Anterior</button>
